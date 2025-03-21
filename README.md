@@ -18,6 +18,7 @@ A personalized quick-reference guide for mastering Neovim’s essential commands
 - `k`: Move cursor up
 - `l`: Move cursor right
 - `Ctrl+g`: Show file location and status
+- `Ctrl+w`: Window navigation (e.g., `Ctrl+w h/j/k/l` to move between splits)
 
 ## Editing
 - `i`: Insert text before cursor
@@ -31,6 +32,7 @@ A personalized quick-reference guide for mastering Neovim’s essential commands
 - `d$`: Delete from cursor to end of line
 - `dd`: Delete entire current line
 - `r`: Replace character under cursor with another character
+- `R`: Replace multiple characters (enter replace mode)
 - `ce`: Change from cursor to end of current word
 - `c$`: Change from cursor to end of line
 - `cw`: Change from cursor to start of next word
@@ -44,13 +46,19 @@ operator + [count/number] + motion
 ```
 Examples: `d2w` (delete 2 words), `c3e` (change 3 words to end)
 
-## Pasting
+## Copy & Pasting
+- `y`: Yank (copy) selected text or motion (e.g., `yw` to yank a word)
 - `p`: Paste after cursor
 - `P`: Paste before cursor
+
+## Visual Mode
+- `v`: Enter visual mode (character-wise selection)
+- `V`: Enter visual mode (line-wise selection) *Note: Added as a common companion to `v`*
 
 ## Search
 - `/<search>`: Search forward for `<search>`
 - `?<search>`: Search backward for `<search>`
+- `/<search>\c`: Search forward, case-insensitive
 - `n`: Go to next search result
 - `N`: Go to previous search result (reverse direction)
 
@@ -63,10 +71,25 @@ Examples: `d2w` (delete 2 words), `c3e` (change 3 words to end)
 
 ## File Operations
 - `:r <file>`: Read and insert contents of `<file>` below cursor
+- `:e`: Edit a file (e.g., `:e filename`) + `Ctrl+d` or `Tab` for completion
 
 ## External Commands
 - `:!<command>`: Execute external shell command (e.g., `:!ls` or `:!git status`)
 - `:r !<command>`: Insert output of external command below cursor (e.g., `:r !ls`)
 
+## Options
+- `:set ic`: Enable case-insensitive search
+- `:set hls is`: Enable search highlighting and incremental search
+- `:set noic`: Disable case-insensitive search
+- `:set invic`: Toggle case-insensitive search
+- `:nohlsearch`: Clear search highlighting
+
+## Help
+- `:help`: Open help window
+- `:help w`: Open help for the `w` command (or any topic)
+
 ## Saving Selection
 - `v<select>` + `:'<,'>w TEST`: Save selected text to a new file named `TEST`
+
+## Configuration
+- `init.vim`: Neovim configuration file (typically at `~/.config/nvim/init.vim`)
