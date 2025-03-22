@@ -55,6 +55,16 @@ Examples: `d2w` (delete 2 words), `c3e` (change 3 words to end)
 - `v`: Enter visual mode (character-wise selection)
 - `V`: Enter visual mode (line-wise selection) *Note: Added as a common companion to `v`*
 
+## Buffers
+- `:ls`: List open buffers
+- `:b<number>`: Switch to buffer by number (e.g., `:b2`)
+- `:bn`: Go to next buffer
+- `:bp`: Go to previous buffer
+- `:b#`: Switch to last active buffer
+- `:bd`: Delete (close) current buffer
+- `:bufdo bd`: Close all buffers
+- `:e <filename>`: Open a new file in a buffer
+
 ## Search
 - `/<search>`: Search forward for `<search>`
 - `?<search>`: Search backward for `<search>`
