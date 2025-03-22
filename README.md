@@ -90,6 +90,14 @@ Examples: `d2w` (delete 2 words), `c3e` (change 3 words to end)
 - `:r <file>`: Read and insert contents of `<file>` below cursor
 - `:e`: Edit a file (e.g., `:e filename`) + `Ctrl+d` or `Tab` for completion
 
+## **Quitting Neovim**
+- `:q` → Quit current window (fails if unsaved changes exist)  
+- `:q!` → Force quit current window **without saving**  
+- `:wq` → Save and quit current window  
+- `:x` or `ZZ` → Save only if changes were made, then quit  
+- `:qa` → Quit all open buffers and exit Neovim (fails if unsaved changes exist)  
+- `:qa!` → **Force quit all** buffers **without saving**  
+
 ## External Commands
 - `:!<command>`: Execute external shell command (e.g., `:!ls` or `:!git status`)
 - `:r !<command>`: Insert output of external command below cursor (e.g., `:r !ls`)
