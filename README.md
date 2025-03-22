@@ -1,6 +1,13 @@
 # Neovim Cheat Sheet
 A personalized quick-reference guide for mastering Neovim’s essential commands and workflows.
 
+## **Setup**
+To install and configure Neovim with [kickstart.nvim](https://github.com/ndy-s/kickstart.nvim), run:  
+```sh
+git clone https://github.com/ndy-s/kickstart.nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+```
+This will set up a basic Neovim configuration with sensible defaults.  
+
 ## Navigation
 - `Ctrl-]`: Jump to definition or references
 - `Ctrl-o`: Return to previous location after a jump
